@@ -1,0 +1,27 @@
+{
+  "name": "okinawa",
+  "version": "1.0.0",
+  "description": "A html5 web program for our okinawa trip.",
+  "main": "index.js",
+  "dependencies": {
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ccflower@github.com/ccflower/okinawa.git"
+  },
+  "keywords": [
+    "html5",
+    "okinawa"
+  ],
+  "author": "ccflower Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccflower/okinawa/issues"
+  },
+  "homepage": "https://github.com/ccflower/okinawa#readme"
+}

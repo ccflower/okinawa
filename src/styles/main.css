@@ -21,9 +21,15 @@
 .page3 {
   background: green;
 }
-.page3 {
+.page4 {
   background: yellow;
 }
-.page3 {
+.page5 {
   background: orange;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
