@@ -4,6 +4,7 @@
   "description": "A html5 web program for our okinawa trip.",
   "main": "index.js",
   "dependencies": {
+    "all-animation": "^2.1.3",
     "zepto": "^1.2.0"
   },
   "devDependencies": {},

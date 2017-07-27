@@ -8,12 +8,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
   color: white;
+  z-index: 1;
 }
 .page1 {
   background: blue;
   display: block;
+  z-index: 100;
 }
 .page2 {
   background: red;
@@ -28,8 +29,12 @@
   background: orange;
 }
 .hide {
-  display: none;
+  z-index: 99;
 }
 .show {
-  display: block;
+  z-index: 100;
+}
+.page img {
+  width: 100%;
+  height: 100%;
 }
