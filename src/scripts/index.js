@@ -1,10 +1,29 @@
-// $(document).swipeUp(function(){
-//     alert("ok");
-// });
-
 document.addEventListener('touchmove', function (event) {
     event.preventDefault();
 }, false);
+
+//audio play automatically
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    //for ios    
+    var play = function(){  
+        var audio = document.getElementById(id);
+        audio.play();  
+        document.removeEventListener("touchstart",play, false);  
+    };    
+    document.addEventListener("WeixinJSBridgeReady", function () {  
+        play();  
+    }, false);  
+    document.addEventListener('YixinJSBridgeReady', function() {  
+        play();  
+    }, false);  
+    document.addEventListener("touchstart",play, false);  
+}  
+
+document.addEventListener('DOMContentLoaded', function () {
+   audioAutoPlay('Jaudio');
+});
 
 var curpage=1;
 var totalpage,nextpage,lastpage,nexttotalpage;
