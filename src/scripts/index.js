@@ -1,3 +1,4 @@
+//for touch event
 document.addEventListener('touchmove', function (event) {
     event.preventDefault();
 }, false);
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
    audioAutoPlay('Jaudio');
 });
 
+//logic for page switch
 var curpage=1;
 var totalpage,nextpage,lastpage,nexttotalpage;
 
