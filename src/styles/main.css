@@ -39,30 +39,32 @@
   height: 100%;
 }
 
-.loader {
-    margin: 10em auto;
-    z-index:10000;
+.textbox{
+    width:50px; 
+    height: 400px; 
+    position: absolute; 
+    top:50px; 
+    right: 0px; 
+    margin-left: 0; 
+    margin-top: 0; 
+    color:yellow; 
+    font-size: 64px;
+    -webkit-writing-mode:vertical-rl;
+    writing-mode:tb-rl;
+    writing-mode:vertical-rl;
 }
 
-.loader--spinningDisc {
-    border: solid 0.5em #9b59b6;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    padding: 0.5em;
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    background: #3498db;
-    background-clip: content-box;
-    animation: spinDisc 1.5s linear infinite;
-}
-@keyframes spinDisc {
-    50% {
-        border-top-color: #3498db;
-        border-bottom-color: #3498db;
-        background-color: #2ecc71;
-    }
-    100% {
-        transform: rotate(1turn);
-    }
+.slide-block-arrow {
+  border: 0 none;
+  vertical-align: middle;
+  display: block;
+  width: 26px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  margin-left: -13px;
+  z-index: 999;
+  animation: arrowani 1.5s linear infinite;
+  -webkit-animation: arrowani 1.5s linear infinite;
 }

@@ -8,25 +8,47 @@
         <script src="node_modules/zepto/dist/zepto.min.js"></script>
         <script src="src/libs/zepto/touch.js"></script>
         <script src="src/scripts/index.js"></script>
+        <style>
+            .page1{background-image: url("src/assets/img/guojitong.jpg"); background-repeat: no-repeat; background-size: cover;}
+            .page2{background-image: url("src/assets/img/zuojiafu.jpg"); background-repeat: no-repeat; background-size: cover;}
+            .page3{background-image: url("src/assets/img/wanzuomao.jpg"); background-repeat: no-repeat; background-size: cover;}
+            .page4{background-image: url("src/assets/img/shuizuguan.jpg"); background-repeat: no-repeat; background-size: cover;}
+            .page5{background-image: url("src/assets/img/guyuli.jpg"); background-repeat: no-repeat; background-size: cover;}
+        </style>
     </header>
     <body>
-        <section>
-            <div class='loader loader--spinningDisc'></div>
-        </section>
-        <section>
-            <div id="pages">
-                <div class="page page1"><img src="src/assets/img/guojitong.jpg" alt=""/></div>
-                <div class="page page2"><img src="src/assets/img/zuojiafu.jpg" alt=""/></div>
-                <div class="page page3"><img src="src/assets/img/wanzuomao.jpg" alt=""/></div>
-                <div class="page page4"><img src="src/assets/img/shuizuguan.jpg" alt=""/></div>
-                <div class="page page5"><img src="src/assets/img/guyuli.jpg" alt=""/></div>
+        <div id="pages">
+            <div class="page page1">
+                <div class="textbox">
+                    <h5>国际通</h5>
+                </div>
             </div>
-            <li>
-                <img src="src/assets/img/arrow.png" class="slide-block-arrow" />
-            </li>
-        </section>
+            <div class="page page2">
+                <div class="textbox">
+                    <h5>座嘉敷岛</h5>
+                </div>
+            </div>
+            <div class="page page3">
+                <div class="textbox">
+                    <h5>万座毛</h5>
+                </div>
+            </div>
+            <div class="page page4">
+                <div class="textbox">
+                    <h5>美丽海水族馆</h5>
+                </div>
+            </div>
+            <div class="page page5">
+                <div class="textbox">
+                    <h5>古宇利岛</h5>
+                </div>
+            </div>
+        </div>
+        <li>
+            <img src="src/assets/img/arrow.png" class="slide-block-arrow" />
+        </li>
         <audio src="src/assets/audio/okinawasong.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
-        <div id="audioPlay">Test
+        <div id="audioPlay">
         </div>
     </body>
 </html>
