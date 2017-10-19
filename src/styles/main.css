@@ -39,7 +39,7 @@
   height: 100%;
 }
 
-.textbox{
+.textbox1, .textbox2, .textbox3, .textbox4, .textbox5{
     width:50px; 
     height: 400px; 
     position: absolute; 
@@ -52,6 +52,10 @@
     -webkit-writing-mode:vertical-rl;
     writing-mode:tb-rl;
     writing-mode:vertical-rl;
+    display: none;
+}
+.textbox1 {
+  display: block;
 }
 
 .slide-block-arrow {

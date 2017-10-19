@@ -26,15 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
    audioAutoPlay('Jaudio');
 });
 
+//生成随机整数函数
+function rnd(start, end){
+    return Math.floor(Math.random() * (end - start) + start);
+}
+//文字进入特效数组
+var inClassArray = ['enter-up-bounce','dance','pulse-slow', 'journal', 'jamp'];
+var temLength = inClassArray.length;
+
+
 //logic for page switch
 var curpage=1;
 var totalpage,nextpage,lastpage,nexttotalpage;
 
-$(document).swipeUp(function(){
-
-//判断当前页是否为最后一页
-
-        //获取总页数,以及总页数的+1后的序号，供后面for循环使用
+function switchPage() {
+    //获取总页数,以及总页数的+1后的序号，供后面for循环使用
     totalpage = $(".page").length;
     nexttotalpage = totalpage+1;
     //如果是最后一页，显示第一页，并移除所有page上的所有css效果类，否则显示下一页，并移除上一页的切换动画效果
@@ -57,7 +63,17 @@ $(document).swipeUp(function(){
         $(".page"+nextpage).removeClass("hide");
         $(".page"+nextpage).addClass("show");
         $(".page"+nextpage).addClass("flip-bottom");
-        $(".page"+lastpage).removeClass("legend-top");
+        //为文字添加随机特效
+        var randomNum = rnd(0,temLength);
+        setTimeout(function(){
+            $(".textbox"+nextpage).css('display','block');
+            $(".textbox"+nextpage).addClass(inClassArray[curpage-1]);
+        },500);
+        $(".page"+lastpage).removeClass("flip-top");
         curpage = nextpage;
     }
+}
+
+$(document).swipeUp(function(){
+    switchPage();
 });
