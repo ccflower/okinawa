@@ -52,6 +52,13 @@ function switchPage() {
         }
         $(".page1").addClass("show");
         $(".page1").addClass("flip-bottom");
+        //为文字添加随机特效
+        clearTextAnimation();
+        var randomNum = rnd(0,temLength);
+        setTimeout(function(){
+            $(".textbox"+1).css('display','block');
+            $(".textbox"+1).addClass(inClassArray[0]);
+        },500);
         curpage =1;
     }else{
         nextpage = curpage+1;
@@ -64,6 +71,7 @@ function switchPage() {
         $(".page"+nextpage).addClass("show");
         $(".page"+nextpage).addClass("flip-bottom");
         //为文字添加随机特效
+        clearTextAnimation();
         var randomNum = rnd(0,temLength);
         setTimeout(function(){
             $(".textbox"+nextpage).css('display','block');
@@ -72,6 +80,13 @@ function switchPage() {
         $(".page"+lastpage).removeClass("flip-top");
         curpage = nextpage;
     }
+}
+
+function clearTextAnimation() {
+    $('.page>div').each(function (i) {
+        $(this).css({ 'visibility': 'hidden' });
+        $(this).attr('class', 'textbox'+(i+1));
+    });
 }
 
 $(document).swipeUp(function(){
