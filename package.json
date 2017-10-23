@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "all-animation": "^2.1.3",
+    "animate.css": "^3.5.2",
     "zepto": "^1.2.0"
   },
   "devDependencies": {},

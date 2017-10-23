@@ -91,9 +91,25 @@ $(function() {
 
     $(document).swipeUp(function(){
         switchPage("up");
-    })
+    });
 
     $(document).swipeDown(function(){
         switchPage("down");
-    })
+    });
+
+    // share to wechat friend
+    wx.onMenuShareAppMessage({
+        title: 'Okinawa, here we are!', // 分享标题
+        desc: "TS and Flower's wonderful trip in Okinawa.", // 分享描述
+        link: 'http://116.196.109.158:8080/okinawa/okinawa/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: 'src/assets/img/guyuli.jpg', // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () { 
+            // 用户确认分享后执行的回调函数
+        },
+        cancel: function () { 
+            // 用户取消分享后执行的回调函数
+        }
+    });
 })
